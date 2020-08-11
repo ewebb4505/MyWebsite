@@ -1,0 +1,30 @@
+
+.project{
+    position: relative;
+    min-height: 100vh;
+    overflow: visible;
+    width: 100%;
+    
+}
+
+#projects{
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.projects-container{
+    position: relative;
+    width: 100%;
+}
+
+.list-of-projects{
+    margin-right: 0px;
+    margin-left: 0px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.project-list-item{
+    display: inline;
+}

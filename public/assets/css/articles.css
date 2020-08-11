@@ -1,0 +1,15 @@
+.notes-and-articles{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.section-header{
+    font-size: 150px;
+    font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif; 
+    text-align: center;
+}
+
+#articles-header{
+    font-size: 100px !important;
+}

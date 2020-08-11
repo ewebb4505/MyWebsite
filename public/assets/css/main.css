@@ -1,0 +1,19 @@
+@import 'sidebar.css';
+@import 'profile.css';
+@import 'experience.css';
+@import 'articles.css';
+@import 'project.css';
+@import 'skills_table.css';
+
+.fa-bars{
+    color: white;
+    padding-right: 10px;
+}
+
+#content{
+    background-color: #DCC7AA;
+}
+
+body{
+    font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif; 
+}
