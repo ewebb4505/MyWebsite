@@ -1,24 +1,5 @@
-.section-header{
-    font-size: 150px;
-    font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif; 
-    text-align: center;
 
-}
-.section-header-container{
-    position: relative;
-    margin-bottom: 30px;
-}
-.section-subheader{
-    font-size: 20px;
-    font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif; 
-    text-align: center;
-}
 
-#profile-container{
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-bottom: 100px;
-}
 
 #profile-page{
     position: relative;
@@ -94,13 +75,14 @@
 
 /* UPDATES TO THE PROFILE PAGE */
 .aboutme-container{
-    height: 400px;
+    height: 500px;
     position: relative;
+    background-color: white;
     width: 90%;
-    min-width: 900px;
     max-width: 1600px;
     margin: 0 auto;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .profile{
@@ -122,7 +104,18 @@ img.img-of-me{
     padding: 0px;
 }
 
-
 .about-me-header{
     text-align: center;
+}
+
+.background-for-profile{
+    width: 100%;
+    background: linear-gradient(#861F41, #E87722  25%, #E0E0E0);
+}
+
+#profile-container{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 100px;
+    height: 600px;
 }

@@ -10,8 +10,8 @@
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #0F1626;
-    color: #fff;
+    background: #E0E0E0;
+    color: #861F41;
     transition: all 0.3s;
 }
 
@@ -47,7 +47,11 @@ a[data-toggle="collapse"] {
 .navagation-item{
     position: relative;
     font-size: x-large;
-    color: white;
+    color: #E87722;
+}
+
+.navagation-item:hover{
+    color: #861F41;
 }
 
 .sidebar-header{
@@ -68,11 +72,11 @@ a[data-toggle="collapse"] {
 
 #sidebarCollapse{
     border-radius: 50%px;
-    background-color: #0F1626;
-    border: solid 2px white; 
+    background-color: #861F41;
+    border: solid 2px #E87722; 
     color: white;
 }
 
-.nav-link{
+.nav-item{
     color: white;
 }

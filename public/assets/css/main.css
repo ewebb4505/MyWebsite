@@ -11,9 +11,20 @@
 }
 
 #content{
-    background-color: #DCC7AA;
+    background-color: #E0E0E0;
 }
 
 body{
     font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif; 
+}
+.section-header-container{
+    position: relative;
+    margin-bottom: 30px;
+}
+.section-header{
+    font-size: 150px;
+    font-family: Book Antiqua,Palatino,Palatino Linotype,Palatino LT STD,Georgia,serif; 
+    text-align: center;
+    color: black;
+
 }
