@@ -13,8 +13,19 @@
 
 .experience{
     position: relative;
-    border: solid 4px black;
     margin: auto;
     margin-bottom: 50px;
 }
 
+.experience-type-header{
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: black dashed 2px;
+}
+
+.experience-type-icon{
+    margin-right: 20px;
+}

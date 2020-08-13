@@ -4,7 +4,8 @@
         <h1 class="section-header">Experience</h1>
     </div>
     <div class="container-fluid experience-content-container">
-        <div class="container-fluid experience-type" style="padding: initial"> <h3>Internships</h3>
+        <div class="container-fluid experience-type" style="padding: initial"> 
+            <div class="experience-type-header"><ion-icon class="experience-type-icon" name="construct-outline" size="large"></ion-icon><h3>Internships</h3></div>
             <div class="row experience">
                 <div class="col-4">
                     <div class="row"> Lowes
@@ -34,7 +35,8 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid experience-type" style="padding: initial"> <h3>Education</h3>
+        <div class="container-fluid experience-type" style="padding: initial"> 
+            <div class="experience-type-header"><ion-icon class="experience-type-icon" name="library-outline" size="large"></ion-icon><h3>Education</h3></div>
             <div class="row experience">
                 <div class="col-4">
                     <div class="row"> Virginia Tech
@@ -60,13 +62,26 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="shadow-lg card">
-        <div class="card-header" style="text-align: center;">Skills</div>
-        <div class="card-body"> 
-            {% include "/components/skills_table.twig"%}
-
+        <div class="container-fluid experience-type" style="padding: initial"> 
+            <div class="experience-type-header"><ion-icon class="experience-type-icon" name="code-working-outline" size="large"></ion-icon><h3>Skills</h3></div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Front-End Skills</th>
+                        <th></th>
+                        <th>Back-End Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td> Skill rating </td>
+                        <td>Java</td>
+                        <td> Skill rating </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="card-footer"></div>
     </div>
+   
 </div>

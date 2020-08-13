@@ -13,6 +13,7 @@
     background: #E0E0E0;
     color: #861F41;
     transition: all 0.3s;
+    border-right: black solid 2px;
 }
 
 #sidebar.active {
@@ -71,12 +72,9 @@ a[data-toggle="collapse"] {
 
 
 #sidebarCollapse{
-    border-radius: 50%px;
+    position: fixed;
     background-color: #861F41;
     border: solid 2px #E87722; 
     color: white;
-}
-
-.nav-item{
-    color: white;
+    z-index: 999;
 }
