@@ -17,6 +17,12 @@ return function (ContainerBuilder $containerBuilder) {
             'views' => [
                 'path' => __DIR__ . '/../templates',
                 'settings' => ['cache' => false],
+            ],
+            'connection' => [
+                'host' => 'mywebsite',
+                'dbname' => 'my_website',
+                'dbuser' => 'Evan',
+                'dbpass' => 'test1234',
             ]
         ],
     ]);

@@ -10,6 +10,7 @@ use Slim\Factory\ServerRequestCreatorFactory;
 use Slim\Views\Twig;
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/Config/database.php';
 
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
@@ -37,6 +38,10 @@ $container = $containerBuilder->build();
 //     return Twig::create(__DIR__ . '../templates');
 // });
 
+// Set up Connection 
+$connection = require __DIR__ . '/../app/connection.php';
+$connection($container);
+
 // Instantiate the app
 AppFactory::setContainer($container);
 $app = AppFactory::create();
@@ -44,32 +49,6 @@ $callableResolver = $app->getCallableResolver();
 
 $views = require __DIR__ . '/../app/views.php';
 $views($app);
-// This does not work for some reason 
-// $app->add(TwigMiddleware::createFromContainer($app));
-//Add the twig template files 
-// $appContainer = $app->getContainer();
-
-// $appContainer->view = function( $appContainer ){
-// 	$view = new \Slim\Views\Twig('../templates', [
-// 		'cache' => false
-// 	]);
-
-// 	$view->addExtension(new \Slim\Views\TwigExtension(
-// 		$appContainer['router'],
-// 		$appContainer['request']->getUri()
-// 	));
-
-// 	$view->addExtension( new Twig_Extension_Debug());
-
-// 	$view->addExtension( new Twig_Extensions_Extension_Date());
-
-// 	$view['current_url'] = $_SERVER['REQUEST_URI'];
-// 	$view['base_url'] = "http://localhost:8080";
-// 	$view['asset_url'] = "http://localhost:8080";
-
-// 	return $view;
-// };
-
 
 // Register middleware
 $middleware = require __DIR__ . '/../app/middleware.php';

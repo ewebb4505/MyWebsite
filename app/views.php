@@ -18,8 +18,8 @@ return function (App $app){
 
         $view = new Twig($loader, $settings['settings']);
 
-        $view['base_url'] = "http://localhost:8080";
-        $view['asset_url'] = 'http://localhost:8080/assets';
+        $view['base_url'] = "http://mywebsite/";
+        $view['asset_url'] = 'http://mywebsite/assets';
         return $view;
     });
 

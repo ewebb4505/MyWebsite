@@ -9,24 +9,34 @@ use Slim\App;
 use Slim\Interfaces\RouteCollectorProxyInterface as Group;
 use Slim\Routing\RouteCollectorProxy;
 
+require 'dbfunctions.php';
+
 return function (App $app) {
     $app->options('/{routes:.*}', function (Request $request, Response $response) {
         // CORS Pre-Flight OPTIONS Request Handler
         return $response;
     });
-
-    // $app->get('/', function (Request $request, Response $response){
-    //     return $this->view->render($response, 'main.twig');
-    // })->setName('root');
-
     $container = $app->getContainer();
-    $app->group("", function (RouteCollectorProxy $view) {
-       
-        $view->get("/", function($request, $response, $args) {
-            return $this->get('view')->render($response, 'main.twig');        
+    $app->get('/me', function (Request $request, Response $response) use ($container) {
+    
+        $me = getMe($container->get('connection'));
+        $body = $response->getBody();
+        $body->write(json_encode($me));
+        
+        return $response;
+    })->setName('root');
+    
+    $app->group("", function (RouteCollectorProxy $view) use ($app){
+        $container = $app->getContainer();
+        $view->get("/", function($request, $response, $args) use ($container){
+            $me = getMe($container->get('connection'));
+            $data = json_encode($me);
+            return $this->get('view')->render($response, 'main.twig', compact('data'));        
         });
 
+        
     })->add($container->get('viewMiddleware'));
+
 
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
