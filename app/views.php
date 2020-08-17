@@ -17,6 +17,7 @@ return function (App $app){
         $loader = new FilesystemLoader($settings['path']);
 
         $view = new Twig($loader, $settings['settings']);
+        $view->addExtension(new \Twig\Extension\DebugExtension());
 
         $view['base_url'] = "http://mywebsite/";
         $view['asset_url'] = 'http://mywebsite/assets';

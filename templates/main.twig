@@ -25,9 +25,9 @@
     </head>
     
     <body data-spy="scroll" data-target=".navbar" data-offset="25">
-        
-        <div class="wrapper"> {{ data }}
-            {% include 'components/sidebar.twig' %}
+        {% set fname = data['first_name'] %}
+        <div class="wrapper"> 
+            {% include 'components/sidebar.twig' with {fname: data['first_name']}%}
             <!-- Page Content -->
             <div id="content">
                 <nav class="navbar navbar-expand-lg navbar-light" id="top-navbar" style="background-color: #861F41;">

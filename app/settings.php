@@ -16,7 +16,7 @@ return function (ContainerBuilder $containerBuilder) {
             ],
             'views' => [
                 'path' => __DIR__ . '/../templates',
-                'settings' => ['cache' => false],
+                'settings' => ['debug' => true, 'cache' => false],
             ],
             'connection' => [
                 'host' => 'mywebsite',

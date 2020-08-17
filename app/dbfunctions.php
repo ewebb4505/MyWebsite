@@ -6,7 +6,7 @@ function getMe($pdo){
         $db = $pdo;
         $stmt = $db->query($sql);
         
-        $me = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $me = $stmt->fetch(PDO::FETCH_ASSOC);
         $db = null;
         return $me;
     } 

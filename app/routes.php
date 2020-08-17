@@ -30,8 +30,8 @@ return function (App $app) {
         $container = $app->getContainer();
         $view->get("/", function($request, $response, $args) use ($container){
             $me = getMe($container->get('connection'));
-            $data = json_encode($me);
-            return $this->get('view')->render($response, 'main.twig', compact('data'));        
+            
+            return $this->get('view')->render($response, 'main.twig', array("data" => $me));        
         });
 
         
